@@ -1,49 +1,111 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>NYT Search</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
-    </head>
-    <body>
+<html lang="en">
 
-        <div class="jumbotron">
-            <h1>New York Times Search</h1>
-        </div>
+<head>
+  <meta charset="utf-8">
+  <title>JavaScript Object Review</title>
+</head>
 
-        <div class="container">
-            <h3>Search Parameters</h3>
-                <h4>Search Term:</h4>
-                <input type="text class="search-term" value="search-term">
-                <h4>Number of Records to Retrieve</h4>
-                <div class="input-group mb-3">
-                        <select class="custom-select" id="inputGroupSelect02">
-                          <option selected>Choose...</option>
-                          <option value="1">1</option>
-                          <option value="2">2</option>
-                          <option value="3">3</option>
-                          <option value="4">4</option>
-                          <option value="5">5</option>
-                          <option value="6">6</option>
-                          <option value="7">7</option>
-                          <option value="8">8</option>
-                          <option value="9">9</option>
-                          <option value="10">10</option>
-                        </select>
-                        <div class="input-group-append">
-                          <label class="input-group-text" for="inputGroupSelect02">Options</label>
-                        </div>
-                      </div>
-        </div>
+<body>
+
+    <div class="jumbotron">
         
+      <div class="container">
+          <h1 class="display-4">New York Times Search</h1>
+      </div>
+    </div>
+       
+      <!-- Seartch Term -->
+    <div class="container">
+    <div class="row">
+      <h3>Search Parameters</h3>
+    </div>
+      <form>
+      
+          <div class="form-group">
+            <label for="exampleInputEmail1">Search Term:</label>
+            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" >
+           
+          </div>
+      </form>
+      
+      
+      <div class="form-group">
+          <label for="exampleFormControlSelect1">Number of Records to Retrieve:</label>
+          <select class="form-control" id="exampleFormControlSelect1">
+          
+            <option selected>Choose</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+          </select>
+        </div>
+      
+      
+        <form>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Start Year (Optional):</label>
+              <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div>
+        </form>
+        <form>
+            <div class="form-group">
+              <label for="exampleInputEmail1">End Year: (Optional):</label>
+              <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div>
+        </form>
+        <div class="row">
+          <button type="button" class="btn btn-primary">Search</button>
+          <button type="button" class="btn btn-secondary">Clear Results</button>
+        </div>
+        <div class="container">
+            <div class="row">
+              <h3>Top Articles</h3>
+            </div>
+    </div>
 
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-        <script src ="/javascript/app.js"></script>
-    </body>
+
+
+  <script type="text/javascript">
+    var customer = {
+      firstName: "John",
+      lastName: "Smith",
+      age: 25,
+      address: {
+        streetAddress: "21 2nd Street",
+        city: "New York",
+        state: "NY",
+        postalCode: "10021"
+      },
+      phoneNumber: [{
+        type: "home",
+        number: "212 555-1234"
+      }, {
+        type: "fax",
+        number: "646 555-4567"
+      }]
+    };
+
+    // Step 1: Log the First Name below using console.log
+    console.log(customer.firstName);
+    // Step 2: Log the Last Name below using console.log
+    console.log(customer.lastName);
+    // Step 3: Log the State of the Address below using console.log
+    console.log(customer.address.state);
+    // Step 4: Log the Home Phone Number below using console.log
+    console.log(customer.phoneNumber[0].number);
+    // Step 5: Log the Fax Number below using console.log
+    console.log(customer.phoneNumber[1].number);
+  </script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</body>
+
 </html>
